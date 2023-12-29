@@ -1,0 +1,56 @@
+# IntelliJ IDEA files
+.idea/
+
+# Compiled bytecode
+out/
+
+# Gradle files (if you're using Gradle)
+build/
+.gradle/
+
+# Maven files (if you're using Maven)
+target/
+*.iml
+
+# Kotlin-specific files
+*.kotlin_module
+
+# Compiled class files
+*.class
+
+# Logs and crash reports
+*.log
+hs_err_pid*
+
+# User-specific files (e.g., workspace.xml, .idea/misc.xml)
+.idea/workspace.xml
+.idea/misc.xml
+
+# JetBrains project specific files
+.idea/codeStyles/
+.idea/caches/
+.idea/modules/
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/uiDesigner.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/jsSupport.xml
+.idea/vcs.xml
+.idea/gradle.xml
+.idea/libraries/
+.idea/tasks.xml
+.idea/workspace.xml
+.idea/runConfigurations/
+.idea/shelf/
+.idea/deployment.xml
+.idea/.name
+.idea/vcs.history/
+.idea/scopes/scope_settings.xml
+.idea/datasources/
+.idea/copyright/
+.idea/properties/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
