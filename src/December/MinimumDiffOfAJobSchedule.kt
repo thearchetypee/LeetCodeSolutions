@@ -5,10 +5,54 @@ import kotlin.math.min
 
 fun main() {
     println(minDifficultyApproach1(intArrayOf(6,5,4,3,2,1), 2))
+    println(minDifficultyApproach2(intArrayOf(6,5,4,3,2,1), 2))
 }
 
 /**
- * Approach 1:
+ *  Approach 2:
+ * - The function minDifficulty takes an array of job difficulties (jobDifficulty) and the
+ *      required number of days (d) as input.
+ *  - It checks if it's impossible to complete the jobs in d days (when the number of jobs is
+ *      less than d). If so, it returns -1.
+ *  - It initializes a 2D array dp to store the minimum difficulties for various subproblems.
+ *      dp[i][j] represents the minimum difficulty to complete the first i jobs in j days.
+ *  - The base case dp[0][0] is initialized to 0, as there is no difficulty when there are 0 jobs and 0 days.
+ *  - The code then uses nested loops to iterate through the jobs (i) and the available days (days).
+ *  - Inside the loops, it calculates the maximum difficulty (maxDifficulty) for the current job based on the
+ *      previous maximum difficulty and the job's difficulty.
+ *  - It then iterates through all possible partitions of jobs for the current day (j).
+ *      For each partition, it calculates the minimum difficulty and updates the dp array accordingly.
+ *
+ *  Time complexity: O(n^2*d)
+ *  Space complexity: O(n*d)
+ */
+
+fun minDifficultyApproach2(jobDifficulty: IntArray, d: Int): Int {
+    val n = jobDifficulty.size
+    if (n < d) return -1  // Check if it's impossible to complete the jobs in 'd' days
+
+    // Create a 2D array 'dp' to store minimum difficulties for each subproblem
+    val dp = Array(n + 1) { IntArray(d + 1) { Int.MAX_VALUE } }
+    dp[0][0] = 0  // Initialize the base case: 0 difficulty for 0 days and 0 jobs
+
+    for (i in 1..n) {  // Iterate through the jobs
+        for (days in 1..d) {  // Iterate through the available days
+            var maxDifficulty = 0  // Initialize the maximum difficulty for the current job/day
+            for (j in i downTo 1) {  // Explore all possible partitions of jobs for the current day
+                maxDifficulty = maxOf(maxDifficulty, jobDifficulty[j - 1])
+                // Calculate the minimum difficulty for the current combination of jobs and days
+                dp[i][days] = minOf(dp[i][days], maxDifficulty + dp[j - 1][days - 1])
+            }
+        }
+    }
+
+    // The minimum difficulty for completing all the jobs in 'd' days is stored in dp[n][d]
+    return dp[n][d]
+}
+
+
+/**
+ * Approach 1: Refer NeetCode video - https://www.youtube.com/watch?v=DAAULrZFeLI
  * Suppose jobDifficulty is [6, 5, 4, 3, 2, 1] and d is 2.
  *
  *  -The function starts by checking if it's possible to complete the jobs in d days.
