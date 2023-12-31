@@ -17,6 +17,9 @@ LeetCode in Kotlin.
 | [Redistribute Characters to Make All Strings Equal](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal) | [Solution](https://github.com/aayush287/LeetCodeSolutions/blob/main/src/December/RedistributeCharacterstoMakeAllStringsEqual.kt) |
 | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums)                                     | [Solution](https://github.com/aayush287/LeetCodeSolutions/blob/main/src/December/KthSmallestPair.kt)                             |
 | [Largest Substring Between Two Equal Characters](https://leetcode.com/problems/largest-substring-between-two-equal-characters)       | [Solution](https://github.com/aayush287/LeetCodeSolutions/blob/main/src/December/MaxLengthBetweenEqualCharacters.kt)             |
+| [Path Crossing](https://leetcode.com/problems/path-crossing) | [Solution](https://github.com/aayush287/LeetCodeSolutions/blob/main/src/December/PathCrossing.kt) |
+| [Decode Ways](https://leetcode.com/problems/decode-ways/) | [Solution](https://github.com/aayush287/LeetCodeSolutions/blob/main/src/December/NumDecoding.kt) |
+| [Minimum Changes To Make Alternating Binary String](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string) | [Solution](https://github.com/aayush287/LeetCodeSolutions/blob/main/src/December/MinOperations.kt) |
 | ...                                                                                                                                  | ...                                                                                                                              |
 
 Feel free to explore the solutions, learn from them, and contribute if you have any improvements or additional solutions
