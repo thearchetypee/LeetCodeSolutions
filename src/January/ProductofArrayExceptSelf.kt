@@ -1,6 +1,6 @@
 package January
 
-fun productExceptSelf(nums: IntArray): IntArray {
+fun productExceptSelfApproach2(nums: IntArray): IntArray {
     val n = nums.size
     val leftArr = IntArray(n)
     val rightArr = IntArray(n)
@@ -30,6 +30,24 @@ fun productExceptSelf(nums: IntArray): IntArray {
     return nums
 }
 
+fun productExceptSelfApproach1(nums: IntArray): IntArray {
+    val n = nums.size
+    val output = IntArray(n)
+
+    for (i in 0 until n) {
+        var product = 1
+
+        for (j in 0 until n) {
+            if (i == j) continue
+            product *= nums[j]
+        }
+
+        output[i] = product
+    }
+
+    return output
+}
+
 fun main() {
-    println(productExceptSelf(intArrayOf(1,2,3, 4)))
+    println(productExceptSelfApproach2(intArrayOf(1,2,3,4)))
 }
