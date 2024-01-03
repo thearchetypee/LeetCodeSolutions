@@ -1,5 +1,26 @@
 package January
 
+fun productExceptSelf(nums: IntArray): IntArray {
+    val n = nums.size
+    val output = IntArray(n)
+
+    // Calculate left products and store them in the output array
+    var left = 1
+    for (i in 0 until n) {
+        output[i] = left
+        left *= nums[i]
+    }
+
+    // Calculate right products and update the output array
+    var right = 1
+    for (i in n - 1 downTo 0) {
+        output[i] *= right
+        right *= nums[i]
+    }
+
+    return output
+}
+
 fun productExceptSelfApproach2(nums: IntArray): IntArray {
     val n = nums.size
     val leftArr = IntArray(n)
