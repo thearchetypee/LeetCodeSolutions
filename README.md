@@ -23,7 +23,7 @@ LeetCode in Kotlin.
 | [Assign Cookies](https://leetcode.com/problems/assign-cookies)                                                                       | [Solution](https://github.com/thearchetypee/LeetCodeSolutions/blob/main/src/January/AssignCookies.kt)                                |
 | [H-Index](https://leetcode.com/problems/h-index)                                                                              | [Solution](https://github.com/thearchetypee/LeetCodeSolutions/blob/main/src/January/HIndex.kt)                                       |
 | [Convert an Array Into a 2D Array With Conditions](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions)                                                                              | [Solution](https://github.com/thearchetypee/LeetCodeSolutions/blob/main/src/January/ConvertanArrayIntoa2DArrayWithConditions.kt)                                       |
-| ...                                                                                                                                  | ...                                                                                                                                  |
+| [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank)                                                                         | [Solution](https://github.com/thearchetypee/LeetCodeSolutions/blob/main/src/January/NumberOfBeamsInABank.kt)                                |
 
 Feel free to explore the solutions, learn from them, and contribute if you have any improvements or additional solutions
 to share. Happy coding!
