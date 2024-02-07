@@ -1,4 +1,4 @@
-package December
+package December23
 
 fun main() {
     println(makeEqual(arrayOf("abc","aabc","bc")))

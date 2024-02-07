@@ -1,4 +1,4 @@
-package January
+package January24
 
 /**
  * Approach 2:

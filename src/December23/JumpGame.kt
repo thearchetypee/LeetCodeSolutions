@@ -1,4 +1,4 @@
-package December
+package December23
 
 fun main() {
     println(canJump(intArrayOf(2, 3, 1, 1, 4)))

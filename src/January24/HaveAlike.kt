@@ -1,4 +1,4 @@
-package January
+package January24
 
 fun halvesAreAlike(s: String): Boolean {
     val size = s.length

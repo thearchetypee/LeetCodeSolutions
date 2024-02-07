@@ -1,4 +1,4 @@
-package January
+package January24
 
 fun productExceptSelf(nums: IntArray): IntArray {
     val n = nums.size
