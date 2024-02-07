@@ -1,4 +1,4 @@
-package January24
+package February24
 
 /**
  *  1. Create a mutable map to store anagrams as key-value pairs. The keys will be
