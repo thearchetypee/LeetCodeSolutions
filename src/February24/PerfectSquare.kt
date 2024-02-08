@@ -18,21 +18,27 @@ import kotlin.math.min
  *
  */
 fun numSquares(n: Int): Int {
-    if (n == 0) return 0
-    var i = 1
-    var ans = Integer.MAX_VALUE
-    while(i*i <= n) {
-        val square = i*i
-        ans = if(n%square == 0) {
-            min(ans, n/square)
-        } else {
-            val remainder = n%square
-            val quot = n/square
-            min(ans, quot+ numSquares(remainder))
+    val memo = IntArray(n+1) { -1 }
+    fun dfs(rem: Int): Int {
+        if (rem == 0) return 0
+        if (memo[rem] != -1) return memo[rem]
+        var i = 1
+        var ans = Integer.MAX_VALUE
+        while(i*i <= rem) {
+            val square = i*i
+            ans = if(rem%square == 0) {
+                min(ans, rem/square)
+            } else {
+                val remainder = rem%square
+                val quot = rem/square
+                min(ans, quot+dfs(remainder))
+            }
+            i++
         }
-        i++
+        memo[rem] = ans
+        return memo[ans]
     }
-    return ans
+    return dfs(n)
 }
 
 fun main() {
