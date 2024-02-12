@@ -19,6 +19,9 @@ package February24
  * 4. If current element is equal to `num`, then increment `count`
  * 5. If current element is not equal to `num`,then decrement `count`
  * 6. Return `num` after traversing array
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  */
 
 fun majorityElement(nums: IntArray): Int {
